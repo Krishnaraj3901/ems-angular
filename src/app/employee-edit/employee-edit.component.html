@@ -1,0 +1,63 @@
+  <div class="container">
+    <div class="row">
+      <h1 class="text-center text-primary mb-3">edit employee details</h1>
+      <div class="col-6"> 
+        <br>
+        <!-- form -->
+        <form>
+          <!-- id -->
+          <div class="mb-3 form-floating">
+            <input [(ngModel)]="employee.fullname"  name="fullname" type="text" class="form-control"  placeholder="fullname" >
+            <label  >fullname</label>
+          </div>
+          <!-- name -->
+          <div class="mb-3 form-floating">
+            <input [(ngModel)]="employee.birthdate" name="date" type="text" class="form-control"  placeholder="dd/mm/yy" >
+            <label >BirthDate</label>
+          </div>
+          <!-- email -->
+          <div class="mb-3 form-floating">
+            <input [(ngModel)]="employee.gender"  name="gender" type="text" class="form-control" placeholder="M/F">
+            <label  for="floatingemail">gender</label>
+          </div>
+          <!-- number -->
+          <div class="mb-3 form-floating">
+            <input [(ngModel)]="employee.education" name="education" type="text" class="form-control"  placeholder="Qualification">
+            <label  for="floatingMobile">Education</label>
+          </div>
+          <!-- company -->
+          <div class="mb-3 form-floating">
+            <input [(ngModel)]="employee.company" name="company" type="text" class="form-control"  placeholder="company" >
+            <label  for="floatingCompany">company</label>
+          </div>
+
+          <div class="mb-3 form-floating">
+            <input [(ngModel)]="employee.jobExperience" name="Experience" type="number" class="form-control"  placeholder="Experience" >years
+            <label  for="floatingCompany">jobExperience</label>
+          </div>
+
+          <div class="mb-3 form-floating">
+            <input [(ngModel)]="employee.salary" name="name" type="number" class="form-control"  placeholder="salary" >LPA
+            <label  for="floatingCompany">salary</label>
+          </div>
+          
+        
+        
+
+          <div class="text-center">
+            <input type="button" (click)="updateEmployee()" routerLink="/employeeMain" value="submit" class="btn btn-outline-dark my-3">
+          </div>
+        </form>
+      </div>
+      <!-- image -->
+      <div class="col-6 ">
+        <br>
+        <input type="file" placeholder="add file" class="form-control">
+        <br>
+        <div class="col-md-2 d-flex justify-content-center align-items-center">
+          <img class="dp" [src]="employee.image" width="400px" height="300px" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+

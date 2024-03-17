@@ -1,0 +1,112 @@
+
+
+
+
+
+<div class="quote">
+<img src="https://cdn.shopify.com/s/files/1/0078/7044/7669/articles/How_to_Set_up_Laptops_for_Employees_Working_Remotely.jpg?v=1685979922
+" alt="">
+<div class="text">
+  <h3>Treat your Employees right so they won't use your internet to look for new jobs!:)</h3>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="main">
+
+
+  <div class="tools">
+
+
+      <div class="add">
+        <button type="button" class="btn btn-outline-success btn-lg" routerLink="/employeeMain/employeeAdd">  Add Employee</button>
+      </div>
+      <div class="search">
+        <input type="search" (keyup)="search($event)" class="form-control" placeholder="search employees">
+      </div>
+  </div>
+</div>
+<!-- {{allEmployees|json}} -->
+<div class="container-fluid g-5 p-5">
+  <div class="row g-0" *ngFor="let employee of allEmployees | search:searchKey:'fullname'">
+    <div class="col-md-2 d-flex justify-content-center align-items-center">
+      <img [src]="employee.image" width="400px" height="300px" alt="">
+    </div>
+
+    <div class="col ps-2">
+        <div class="row g-0" >
+          <div class="col-md-10 text-center">
+            <span class="name">{{employee.fullname}}</span>
+          </div>
+          <div class="col-md-2 d-flex justify-content-center align-items-center">
+              <div class="btn-grp" role="group">
+                <button type="button" class="btn btn-outline-success" routerLink="/employeeMain/employeeEdit/{{employee.id}}">Edit</button>
+                <button type="button" (click)="deleteEmployee(employee.id)" class="btn btn-outline-danger" routerLink="">Delete</button>
+              </div>
+          </div>
+        </div>
+        <div class="row g-0 mt-3">
+            <div class="col-md">
+                <table class="table table-hover mx-auto">
+                  <thead class="text-center fs-5 fst-italic text-secondary">
+                      <tr>
+                        <td colspan="2">personal details</td>
+                      </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Birthdate</td>
+                    <td>{{employee.birthdate}}</td>
+                  </tr>
+                  <tr>
+                    <td>gender</td>
+                    <td>{{employee.gender}}</td>
+                  </tr>
+                  <tr>
+                    <td>Education</td>
+                    <td>{{employee.education}}</td>
+                  </tr>
+                </tbody>
+                </table>
+            </div>
+            <div class="col">
+              <table class="table table-hover mx-auto">
+                <thead class="text-center fs-5 fst-italic text-secondary">
+                    <tr>
+                      <td colspan="2">job details</td>
+                    </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Company</td>
+                  <td>{{employee.company}}</td>
+                </tr>
+                <tr>
+                  <td>Experience</td>
+                  <td>{{employee.jobExperience}} years</td>
+                </tr>
+                <tr>
+                  <td>Salary</td>
+                  <td>{{employee.salary}} LPA</td>
+                </tr>
+              </tbody>
+              </table>
+              <button type="button" class="btn btn-outline-primary" routerLink="/employeeMain/employeeView/{{employee.id}}">view</button>
+
+            </div>
+        </div>
+    </div>
+  </div>
+
+</div>
+
+

@@ -1,0 +1,48 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fullname": "Harry Maguire",
+      "birthdate": "22/08/1986",
+      "gender": "m",
+      "education": "degree",
+      "company": "google",
+      "jobExperience": 12,
+      "salary": 35,
+      "image": "https://cdn-icons-png.flaticon.com/512/3789/3789820.png"
+    },
+    {
+      "id": 3,
+      "fullname": "Andre Onana",
+      "birthdate": "22/08/1992",
+      "gender": "m",
+      "education": "phd",
+      "company": "baskaranpillai technologies",
+      "jobExperience": 5,
+      "salary": 70,
+      "image": "https://cdn-icons-png.flaticon.com/512/3789/3789820.png"
+    },
+    {
+      "fullname": "Krishna Raj",
+      "company": "ggrg",
+      "birthdate": "1998-12-12",
+      "gender": "M",
+      "education": "degree",
+      "jobExperience": 10,
+      "salary": 12,
+      "id": 31,
+      "image": "https://th.bing.com/th/id/OIP.K3Z2QyOcWzCymngfmFwYUwHaHa?pid=ImgDet&rs=1"
+    },
+    {
+      "fullname": "Krishna Raj",
+      "company": "ggrg",
+      "id": 35,
+      "birthdate": "1998-12-12",
+      "gender": "M",
+      "education": "degree",
+      "jobExperience": 12,
+      "salary": 12,
+      "image": "https://logodix.com/logo/1086547.jpg"
+    }
+  ]
+}
